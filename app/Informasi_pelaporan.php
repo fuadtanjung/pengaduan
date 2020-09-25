@@ -9,7 +9,7 @@ class Informasi_pelaporan extends Model
     protected $table = 'informasi_pelaporans';
     protected $primaryKey = 'id_pelaporan';
     protected $fillable = [
-        'nama_pengguna','kontak_pengguna','deskripsi','waktu_pelaporan','status','tipe_id'
+        'no_tiket','nama_pengguna','kontak_pengguna','deskripsi','waktu_pelaporan','status','tipe_id'
     ];
 
     public function dampak(){

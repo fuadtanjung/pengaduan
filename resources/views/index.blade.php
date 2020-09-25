@@ -13,35 +13,30 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url('assets/images/css/bootstrap.min.css')}}" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="{{ url('assets/images/sign-in/signin.css')}}" rel="stylesheet">
+
 
     <link rel="stylesheet" href="{{ url('assets/css/pnotify.custom.css') }}">
 
 
 </head>
 <body>
-<form id="form_pengaduan" role="form" method="POST">
-    @csrf
+    <form id="form_pengaduan" role="form" method="POST">
+        @csrf
 
-    <img class="mb-4" src="{{ url('assets/images/logo.png')}}" alt="" width="325" height="130">
-    <h1 class="h3 mb-3 font-weight-normal text-center">Buku Pengaduan</h1>
+        <img class="mb-4" src="{{ url('assets/images/logo.png')}}" alt="" width="300" height="130">
+        <h1 class="h3 mb-3 font-weight-normal text-center">Buku Pengaduan</h1>
+        <div class="form-group" >
+            <input type="text" name="nama_pengguna" class="form-control" placeholder="Nama Pengguna/Institusi">
+            <input type="number" name="kontak_pengguna"  class="form-control" placeholder="No. Telepon">
+        </div>
+        <div class="form-group"><br>
+            <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" placeholder="pengaduan"></textarea>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="button" aksi="input" id="submit">Isi Buku Pengaduan</button>
+    </form>
 
-    <div class="form-group" >
-        <input type="text" name="nama_pengguna" class="form-control" placeholder="Nama Pengguna/Institusi">
-        <input type="number" name="kontak_pengguna"  class="form-control" placeholder="No. Telepon">
-        <input type="hidden" name="waktu_pelaporan"  class="form-control">
-        <input type="text" name="status" class="form-control" value="diajukan" READONLY hidden>
-        <input type="text" name="media_pelaporan" class="form-control" value="aplikasi" READONLY hidden>
-    </div>
-
-    <div class="form-group"><br>
-        <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" placeholder="pengaduan"></textarea>
-    </div>
-
-    <button class="btn btn-lg btn-primary btn-block" type="button" aksi="input" id="submit">Isi Buku Pengaduan</button>
-</form>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="{{ url('assets/js/pnotify.custom.js') }}"></script>

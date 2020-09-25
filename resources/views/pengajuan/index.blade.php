@@ -7,6 +7,7 @@
                 <div class="table-responsive">
                     <table class="table table-bordered " id="datatable">
                         <thead>
+                            <th>No Tiket</th>
                             <th>Nama Pengguna</th>
                             <th>Kontak Pengguna</th>
                             <th>Deskripsi</th>
@@ -15,6 +16,7 @@
                         </thead>
                         <tfoot>
                         <tr>
+                            <th>No Tiket</th>
                             <th>Nama Pengguna</th>
                             <th>Kontak Pengguna</th>
                             <th>Deskripsi</th>
@@ -168,6 +170,7 @@
             $('#datatable').dataTable({
                 "ajax": "{{ url('/admin/data') }}",
                 "columns": [
+                    { "data": "no_tiket" },
                     { "data": "nama_pengguna" },
                     { "data": "kontak_pengguna" },
                     { "data": "deskripsi" },
@@ -184,24 +187,28 @@
                 ],
                 columnDefs: [
                     {
-                        width: "100px",
+                        width: "50px",
                         targets: [0]
                     },
                     {
-                        width: "220px",
+                        width: "100px",
                         targets: [1]
                     },
                     {
-                        width: "220px",
+                        width: "100px",
                         targets: [2]
                     },
                     {
-                        width: "70px",
+                        width: "300px",
                         targets: [3]
                     },
                     {
-                        width: "100px",
+                        width: "70px",
                         targets: [4]
+                    },
+                    {
+                        width: "100px",
+                        targets: [5]
                     }
                 ],
                 scrollX: true,
@@ -485,7 +492,6 @@
                 $('#submit_pengaduan').removeAttr("idpengaduan");
             });
         })
-
 
     </script>
 @endsection
