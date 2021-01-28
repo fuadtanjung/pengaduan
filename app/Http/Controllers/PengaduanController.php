@@ -43,7 +43,7 @@ class PengaduanController extends Controller
             $informasi_pelaporan->kontak_pengguna = $request->kontak_pengguna;
             $informasi_pelaporan->deskripsi = $request->deskripsi;
             $informasi_pelaporan->status = $status;
-            $informasi_pelaporan->media_pelaporan = $media;
+            $informasi_pelaporan->media_pelaporan = $media; 
             $informasi_pelaporan->waktu_pelaporan = date('Y-m-d');
             if($informasi_pelaporan->save()){
                 return json_encode(array("success"=>"Berhasil Menambahkan Data Pengaduan"));
